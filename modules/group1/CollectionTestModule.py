@@ -13,9 +13,9 @@ from mhubio.core import Module, Instance, InstanceDataCollection
 from mhubio.core.IO import IO
 
 @IO.ConfigInput('in_datas', 'dicom|nrrd|mha:mod=ct|mr|sm', the="target data that will be converted to nifti")
-class PathologyTestModule(Module):
+class CollectionTestModule(Module):
 
-    SCRIPT_PATH = "/app/xcollections/pathology/dummy_dependency.py"
+    SCRIPT_PATH = "/app/src/test_collection/dummy_dependency.py"
 
     @IO.Instance()
     @IO.Inputs('in_datas', the="data to be converted")
